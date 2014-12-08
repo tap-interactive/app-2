@@ -1,0 +1,567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>TAP interactive - App 2</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>TAP interactive - App 2</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../classes/Blob.html">Blob</a></li>
+  <li><strong>Slobs</strong></li>
+</ul>
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/Collison.html">Collison</a></li>
+  <li><a href="../modules/CustomOnKey.html">CustomOnKey</a></li>
+  <li><a href="../modules/Game.html">Game</a></li>
+  <li><a href="../modules/Menu.html">Menu</a></li>
+  <li><a href="../modules/Picture.html">Picture</a></li>
+  <li><a href="../modules/SaveGame.html">SaveGame</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>Slobs</code></h1>
+<p>The Slobs class
+The controller for managing the Slobs class.</p>
+<p></p>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:randomPlace">Slobs:randomPlace (sb_type, lvl_slob)</a></td>
+	<td class="summary">Random spawning place
+The spawning handler for the slobs making them spawn at the edges of the screen and at random places each time.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:createSlob">Slobs:createSlob (slob_type)</a></td>
+	<td class="summary">Create Slob
+ The function setting the Slob parameters.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:spawnSlob">Slobs:spawnSlob (nb_type)</a></td>
+	<td class="summary">Spawn Slob
+The handler of the spawning of the Slobs.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:createSizeSlob">Slobs:createSizeSlob (level)</a></td>
+	<td class="summary">Slob size creation
+The function that controls the size of the Slobs and returns a table.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:displayNumberSlobs">Slobs:displayNumberSlobs (i)</a></td>
+	<td class="summary">Display Slob numbers
+The function that controls the displaying of the Slobs number representing the appropriate level.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:getCharacteristicNumberSlobs">Slobs:getCharacteristicNumberSlobs (num)</a></td>
+	<td class="summary">Slob characteristics
+The function handling the parameters assigned to in a correct way display a Slob of different levels.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:drawSlobs">Slobs:drawSlobs ()</a></td>
+	<td class="summary">Draw Slobs
+The function handling the drawing of the Slobs.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:movementSlobHorizontal">Slobs:movementSlobHorizontal (i)</a></td>
+	<td class="summary">Horizontal movement
+The function controlling the horizontal movement of the Slob.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:movementSlobVertical">Slobs:movementSlobVertical (i)</a></td>
+	<td class="summary">Vertical movement
+The function controlling the vertical movement of the Slob.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:movementSlobSinus">Slobs:movementSlobSinus (i)</a></td>
+	<td class="summary">Slob sinusoidal movement
+ Change local variables period and amplitude to change the sine curve</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:movementSlobDiagonalUp">Slobs:movementSlobDiagonalUp (i)</a></td>
+	<td class="summary">Slob diagonal movement
+The function controlling the digonal movement of the Slob.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:movementSlobRandom">Slobs:movementSlobRandom (i)</a></td>
+	<td class="summary">Slob random movement
+The function controlling the random movement of the Slob.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:movementBoss">Slobs:movementBoss (i)</a></td>
+	<td class="summary">Boss movement
+The function controlling the movement of the boss: Mad Zlobby.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:moveSlobs">Slobs:moveSlobs ()</a></td>
+	<td class="summary">Move Slob
+ The function controlling the movement of a Slob depending on its type.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:removeSlob">Slobs:removeSlob (object_nb)</a></td>
+	<td class="summary">Remove Slob
+ Remove a specific slob using the input ID.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:getRandomLevelSlob">Slobs:getRandomLevelSlob (max_deviation)</a></td>
+	<td class="summary">Random spawning
+Generate a random level Slob based on the Blobs level(input)</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:makeHappy">Slobs:makeHappy (slob)</a></td>
+	<td class="summary">Make happpy
+The function turning the sad Slobs in to happy blobs and moving them out of the screen.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Slobs:decreaseBoss">Slobs:decreaseBoss ()</a></td>
+	<td class="summary">Boss decrease
+The function controlling the decreasing of the boss.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Slobs:randomPlace"></a>
+    <strong>Slobs:randomPlace (sb_type, lvl_slob)</strong>
+    </dt>
+    <dd>
+    Random spawning place
+The spawning handler for the slobs making them spawn at the edges of the screen and at random places each time.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">sb_type</span>
+         The input parameter that represents the type of Slob to be spawned.
+        </li>
+        <li><span class="parameter">lvl_slob</span>
+         The input parameter that represents the level of the Slob to be spawned.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        window_width - tab_level[lvl_slob] The output representing the spawn width.</li>
+        <li>
+        math.random(side_margin,window_height - tab_level[lvl_slob]) The output representing the spawn height.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:createSlob"></a>
+    <strong>Slobs:createSlob (slob_type)</strong>
+    </dt>
+    <dd>
+    Create Slob
+ The function setting the Slob parameters.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">slob_type</span>
+         The parameter representing the type of Slob to be created.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:spawnSlob"></a>
+    <strong>Slobs:spawnSlob (nb_type)</strong>
+    </dt>
+    <dd>
+    Spawn Slob
+The handler of the spawning of the Slobs.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">nb_type</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:createSizeSlob"></a>
+    <strong>Slobs:createSizeSlob (level)</strong>
+    </dt>
+    <dd>
+    Slob size creation
+The function that controls the size of the Slobs and returns a table.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">level</span>
+         The level of the Slob to be created.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        tab_level[level] The output representing the table of
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:displayNumberSlobs"></a>
+    <strong>Slobs:displayNumberSlobs (i)</strong>
+    </dt>
+    <dd>
+    Display Slob numbers
+The function that controls the displaying of the Slobs number representing the appropriate level.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">i</span>
+         The ID of the Slob number to be created.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:getCharacteristicNumberSlobs"></a>
+    <strong>Slobs:getCharacteristicNumberSlobs (num)</strong>
+    </dt>
+    <dd>
+    Slob characteristics
+The function handling the parameters assigned to in a correct way display a Slob of different levels.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">num</span>
+         The input parameter representing the ID of the Slob to get the characteristics from.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        (slob_list[num].x + slob_list[num].width/4) The output parameter representing the x-coordinate for the Slob.</li>
+        <li>
+        (slob_list[num].y + slob_list[num].height/2) The output parameter representing the y-coordinate for the Slob.</li>
+        <li>
+        slob_list[num].width/2  The output parameter representing the width to be displayed.</li>
+        <li>
+        slob_list[num].height/3 The output parameter representing the height to be displayed.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:drawSlobs"></a>
+    <strong>Slobs:drawSlobs ()</strong>
+    </dt>
+    <dd>
+    Draw Slobs
+The function handling the drawing of the Slobs.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:movementSlobHorizontal"></a>
+    <strong>Slobs:movementSlobHorizontal (i)</strong>
+    </dt>
+    <dd>
+    Horizontal movement
+The function controlling the horizontal movement of the Slob.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">i</span>
+         The ID representing the Slob to move.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:movementSlobVertical"></a>
+    <strong>Slobs:movementSlobVertical (i)</strong>
+    </dt>
+    <dd>
+    Vertical movement
+The function controlling the vertical movement of the Slob.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">i</span>
+         The ID representing the Slob to move.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:movementSlobSinus"></a>
+    <strong>Slobs:movementSlobSinus (i)</strong>
+    </dt>
+    <dd>
+    Slob sinusoidal movement
+ Change local variables period and amplitude to change the sine curve
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">i</span>
+         The input parameter representing the ID of the Slob.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:movementSlobDiagonalUp"></a>
+    <strong>Slobs:movementSlobDiagonalUp (i)</strong>
+    </dt>
+    <dd>
+    Slob diagonal movement
+The function controlling the digonal movement of the Slob.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">i</span>
+         The input parameter representing the ID of the Slob.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:movementSlobRandom"></a>
+    <strong>Slobs:movementSlobRandom (i)</strong>
+    </dt>
+    <dd>
+    Slob random movement
+The function controlling the random movement of the Slob.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">i</span>
+         The input parameter representing the ID of the Slob.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:movementBoss"></a>
+    <strong>Slobs:movementBoss (i)</strong>
+    </dt>
+    <dd>
+    Boss movement
+The function controlling the movement of the boss: Mad Zlobby.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">i</span>
+         The input parameter representing the ID of the boss.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:moveSlobs"></a>
+    <strong>Slobs:moveSlobs ()</strong>
+    </dt>
+    <dd>
+    Move Slob
+ The function controlling the movement of a Slob depending on its type.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:removeSlob"></a>
+    <strong>Slobs:removeSlob (object_nb)</strong>
+    </dt>
+    <dd>
+    Remove Slob
+ Remove a specific slob using the input ID.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object_nb</span>
+         The input parameter representing the Slob to be removed.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:getRandomLevelSlob"></a>
+    <strong>Slobs:getRandomLevelSlob (max_deviation)</strong>
+    </dt>
+    <dd>
+    Random spawning
+Generate a random level Slob based on the Blobs level(input)
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">max_deviation</span>
+         Defines the largest deviation the output can have from the input
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        slob_level Random integer based on input
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:makeHappy"></a>
+    <strong>Slobs:makeHappy (slob)</strong>
+    </dt>
+    <dd>
+    Make happpy
+The function turning the sad Slobs in to happy blobs and moving them out of the screen.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">slob</span>
+         The input parameter representing the ID of the Slob.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Slobs:decreaseBoss"></a>
+    <strong>Slobs:decreaseBoss ()</strong>
+    </dt>
+    <dd>
+    Boss decrease
+The function controlling the decreasing of the boss.
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2014-12-08 11:05:03 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

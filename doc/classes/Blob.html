@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>TAP interactive - App 2</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>TAP interactive - App 2</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Methods">Methods</a></li>
+</ul>
+
+
+<h2>Classes</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><strong>Blob</strong></li>
+  <li><a href="../classes/Slobs.html">Slobs</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/Collison.html">Collison</a></li>
+  <li><a href="../modules/CustomOnKey.html">CustomOnKey</a></li>
+  <li><a href="../modules/Game.html">Game</a></li>
+  <li><a href="../modules/Menu.html">Menu</a></li>
+  <li><a href="../modules/Picture.html">Picture</a></li>
+  <li><a href="../modules/SaveGame.html">SaveGame</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Class <code>Blob</code></h1>
+<p>The Blob class
+The controller for managing the Blob class.</p>
+<p></p>
+
+
+<h2><a href="#Methods">Methods</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#Blob:createBlob">Blob:createBlob (pos_x, pos_y, img_url, speed_blob, lev)</a></td>
+	<td class="summary">Blob creation
+The function that creates the playable character.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Blob:moveBlobRight">Blob:moveBlobRight ()</a></td>
+	<td class="summary">Blob movement:Right
+The function that controls the movement to the right for the Blob.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Blob:moveBlobLeft">Blob:moveBlobLeft ()</a></td>
+	<td class="summary">Blob movement:Left
+The function that controls the movement to the left for the Blob.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Blob:moveBlobUp">Blob:moveBlobUp ()</a></td>
+	<td class="summary">Blob movement:Up
+The function that controls the movement up the screen for the Blob.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Blob:moveBlobDown">Blob:moveBlobDown ()</a></td>
+	<td class="summary">Blob movement:Down
+The function that controls the movement down the screen for the Blob.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Blob:moveBlob">Blob:moveBlob ()</a></td>
+	<td class="summary">Blob movement state
+The function that controls the movement state for the Blob.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Blob:displayNumberBlob">Blob:displayNumberBlob ()</a></td>
+	<td class="summary">Blob number display
+The function that handles the numbers, corresponding to the level, to be displayed on the Blob.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Blob:getCharacteristicNumberBlob">Blob:getCharacteristicNumberBlob ()</a></td>
+	<td class="summary">Blob number characteristics
+The function that handles the characteristics of the Blob, corresponding to the level.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Blob:drawBlob">Blob:drawBlob ()</a></td>
+	<td class="summary">Draw Blob
+The function that handles the drawing of the Blob.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Blob:isHigherLevel">Blob:isHigherLevel (object)</a></td>
+	<td class="summary">Is higher level
+ Check if the Slob has a higher or equal level than the Blob</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Blob:growBlob">Blob:growBlob ()</a></td>
+	<td class="summary">Grow Blob
+Make the Blob grow, meaning growing in both height and width, as well as the level gets incremented by 1.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Blob:decreaseBlob">Blob:decreaseBlob (nb)</a></td>
+	<td class="summary">Decrease Blob
+Make the Blob decrease, meaning decreasing in both size and width, as well as the level gets decremented by the difference between the Blobs level and the level of the Slob.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Methods"></a>Methods</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "Blob:createBlob"></a>
+    <strong>Blob:createBlob (pos_x, pos_y, img_url, speed_blob, lev)</strong>
+    </dt>
+    <dd>
+    Blob creation
+The function that creates the playable character.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pos_x</span>
+         The input parameter representing the x-coordinate to the Blob that's to be created.
+        </li>
+        <li><span class="parameter">pos_y</span>
+         The input parameter representing the y-coordinate to the Blob that's to be created.
+        </li>
+        <li><span class="parameter">img_url</span>
+         The input parameter representing the url for the Blob that's to be created.
+        </li>
+        <li><span class="parameter">speed_blob</span>
+         The input parameter representing the speed of the Blob that's to be created.
+        </li>
+        <li><span class="parameter">lev</span>
+         The input parameter representing the appropriate level to the Blob that's to be created.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Blob:moveBlobRight"></a>
+    <strong>Blob:moveBlobRight ()</strong>
+    </dt>
+    <dd>
+    Blob movement:Right
+The function that controls the movement to the right for the Blob.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Blob:moveBlobLeft"></a>
+    <strong>Blob:moveBlobLeft ()</strong>
+    </dt>
+    <dd>
+    Blob movement:Left
+The function that controls the movement to the left for the Blob.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Blob:moveBlobUp"></a>
+    <strong>Blob:moveBlobUp ()</strong>
+    </dt>
+    <dd>
+    Blob movement:Up
+The function that controls the movement up the screen for the Blob.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Blob:moveBlobDown"></a>
+    <strong>Blob:moveBlobDown ()</strong>
+    </dt>
+    <dd>
+    Blob movement:Down
+The function that controls the movement down the screen for the Blob.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Blob:moveBlob"></a>
+    <strong>Blob:moveBlob ()</strong>
+    </dt>
+    <dd>
+    Blob movement state
+The function that controls the movement state for the Blob.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Blob:displayNumberBlob"></a>
+    <strong>Blob:displayNumberBlob ()</strong>
+    </dt>
+    <dd>
+    Blob number display
+The function that handles the numbers, corresponding to the level, to be displayed on the Blob.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Blob:getCharacteristicNumberBlob"></a>
+    <strong>Blob:getCharacteristicNumberBlob ()</strong>
+    </dt>
+    <dd>
+    Blob number characteristics
+The function that handles the characteristics of the Blob, corresponding to the level.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Blob:drawBlob"></a>
+    <strong>Blob:drawBlob ()</strong>
+    </dt>
+    <dd>
+    Draw Blob
+The function that handles the drawing of the Blob.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Blob:isHigherLevel"></a>
+    <strong>Blob:isHigherLevel (object)</strong>
+    </dt>
+    <dd>
+    Is higher level
+ Check if the Slob has a higher or equal level than the Blob
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">object</span>
+         The Slob to compare to the Blob
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Blob:growBlob"></a>
+    <strong>Blob:growBlob ()</strong>
+    </dt>
+    <dd>
+    Grow Blob
+Make the Blob grow, meaning growing in both height and width, as well as the level gets incremented by 1.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Blob:decreaseBlob"></a>
+    <strong>Blob:decreaseBlob (nb)</strong>
+    </dt>
+    <dd>
+    Decrease Blob
+Make the Blob decrease, meaning decreasing in both size and width, as well as the level gets decremented by the difference between the Blobs level and the level of the Slob.  If the Blob level gets lower than one, the Blob will be given a zero as its level and gameOver is called.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">nb</span>
+         The input parameter that represents the ID of the Slob.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2014-12-08 11:05:03 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
