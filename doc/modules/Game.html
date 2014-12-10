@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>TAP interactive - App 2</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>TAP interactive - App 2</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/Collison.html">Collison</a></li>
+  <li><a href="../modules/CustomOnKey.html">CustomOnKey</a></li>
+  <li><strong>Game</strong></li>
+  <li><a href="../modules/Menu.html">Menu</a></li>
+  <li><a href="../modules/Picture.html">Picture</a></li>
+  <li><a href="../modules/SaveGame.html">SaveGame</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../classes/Blob.html">Blob</a></li>
+  <li><a href="../classes/Slobs.html">Slobs</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Game</code></h1>
+<p>The Game module
+The controller for managing the Game module.</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#initializeLevel">initializeLevel (img_background, lvl_limit, sb_limit, nbtype, sb_speed, spawn_rate, with_boss)</a></td>
+	<td class="summary">Initialize level
+ Sets the global variables for the current level.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#gameOver">gameOver ()</a></td>
+	<td class="summary">Game over
+The function controlling the game over event, stopping the timer and setting the background.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#levelCompleted">levelCompleted ()</a></td>
+	<td class="summary">Level complete
+The function controlling the level complete event, stopping the timer, saving the profile and displaying the stars.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#updateCb">updateCb (timer)</a></td>
+	<td class="summary">Update Cb
+The function updating the timer.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#updateState">updateState (delta)</a></td>
+	<td class="summary">Update state
+The function updating the state.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#drawScreen">drawScreen ()</a></td>
+	<td class="summary">Draw Screen
+The function controlling what's to be displayed on the screen after each update.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#start">start (current_lvl, bloba_design)</a></td>
+	<td class="summary">Start
+The function controlling the start event, managing the current level and the avatar for the users Blob.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "initializeLevel"></a>
+    <strong>initializeLevel (img_background, lvl_limit, sb_limit, nbtype, sb_speed, spawn_rate, with_boss)</strong>
+    </dt>
+    <dd>
+    Initialize level
+ Sets the global variables for the current level.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">img_background</span>
+         The image path representing the background image.
+        </li>
+        <li><span class="parameter">lvl_limit</span>
+         The limit of the level.
+        </li>
+        <li><span class="parameter">sb_limit</span>
+         The limit of nthe amount of spawned Slobs.
+        </li>
+        <li><span class="parameter">nbtype</span>
+         The type of the spawned Slobs.
+        </li>
+        <li><span class="parameter">sb_speed</span>
+         The speed of the spawned Slobs.
+        </li>
+        <li><span class="parameter">spawn_rate</span>
+         The rate of which the Slobs spawns.
+        </li>
+        <li><span class="parameter">with_boss</span>
+         The parameter deciding if the level should contain a boss as well.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "gameOver"></a>
+    <strong>gameOver ()</strong>
+    </dt>
+    <dd>
+    Game over
+The function controlling the game over event, stopping the timer and setting the background.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "levelCompleted"></a>
+    <strong>levelCompleted ()</strong>
+    </dt>
+    <dd>
+    Level complete
+The function controlling the level complete event, stopping the timer, saving the profile and displaying the stars.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "updateCb"></a>
+    <strong>updateCb (timer)</strong>
+    </dt>
+    <dd>
+    Update Cb
+The function updating the timer.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">timer</span>
+         The timer input parameter.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "updateState"></a>
+    <strong>updateState (delta)</strong>
+    </dt>
+    <dd>
+    Update state
+The function updating the state.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">delta</span>
+         The input parameter to be used for controling the start.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "drawScreen"></a>
+    <strong>drawScreen ()</strong>
+    </dt>
+    <dd>
+    Draw Screen
+The function controlling what's to be displayed on the screen after each update.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "start"></a>
+    <strong>start (current_lvl, bloba_design)</strong>
+    </dt>
+    <dd>
+    Start
+The function controlling the start event, managing the current level and the avatar for the users Blob.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">current_lvl</span>
+         The input parameter for the level to be started.
+        </li>
+        <li><span class="parameter">bloba_design</span>
+         The input paramter for the users avatar.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2014-12-08 11:05:03 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>TAP interactive - App 2</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>TAP interactive - App 2</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/Collison.html">Collison</a></li>
+  <li><a href="../modules/CustomOnKey.html">CustomOnKey</a></li>
+  <li><a href="../modules/Game.html">Game</a></li>
+  <li><strong>Menu</strong></li>
+  <li><a href="../modules/Picture.html">Picture</a></li>
+  <li><a href="../modules/SaveGame.html">SaveGame</a></li>
+</ul>
+<h2>Classes</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../classes/Blob.html">Blob</a></li>
+  <li><a href="../classes/Slobs.html">Slobs</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Menu</code></h1>
+<p>The Menu module
+The controller for managing the Menu module.</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#load_png">load_png (background)</a></td>
+	<td class="summary">Load png
+The function controlling the loading of the background png-image.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#optionStartpage">optionStartpage (key)</a></td>
+	<td class="summary">Start page options
+The event handler of the startpage, controlling the events to be carried out after input by the user.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#startPage">startPage ()</a></td>
+	<td class="summary">Start page
+Initializes the Startpage</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#chooseLv">chooseLv (key)</a></td>
+	<td class="summary">Choose Level
+Choosing the level from the level page using the input from the user and then outputing a parameter for the appropriate level.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Level">Level ()</a></td>
+	<td class="summary">Level
+Initializes the page with level choices.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#release_memory">release_memory ()</a></td>
+	<td class="summary">Release memory
+The function controlling the memory usage and keeping the graphics memory down.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#chooseParam">chooseParam (key)</a></td>
+	<td class="summary">Choose parameter
+The function taking care of the user input changing between the top, middle and bottom options of the avatar page.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#chooseItem">chooseItem (key)</a></td>
+	<td class="summary">Choose item
+Choosing what items to design the avatar with depending on the user input and the parameter representing the current avatar page "level": top, middle or bottom.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#get_design">get_design ()</a></td>
+	<td class="summary">Get design
+The function controlling the design to be displayed on Bloba.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Avatar">Avatar ()</a></td>
+	<td class="summary">Avatar selection
+The function controlling the avatar selection page.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#Story">Story ()</a></td>
+	<td class="summary">Story
+The function controlling the story event handling the profile, background and the page.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#tutorial">tutorial (tutorial_page)</a></td>
+	<td class="summary">Tutorial
+The function controlling the tutorial event handling the profile, background and the page.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#dance">dance ()</a></td>
+	<td class="summary">Dance function
+The function to handle the event after the completion of the boss level</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "load_png"></a>
+    <strong>load_png (background)</strong>
+    </dt>
+    <dd>
+    Load png
+The function controlling the loading of the background png-image.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">background</span>
+         The input parameter of the path to the background image.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "optionStartpage"></a>
+    <strong>optionStartpage (key)</strong>
+    </dt>
+    <dd>
+    Start page options
+The event handler of the startpage, controlling the events to be carried out after input by the user.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+         The input parameter representing the key that is pressed by the user.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        img_nr The output parameter representing the image to be displayed next.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "startPage"></a>
+    <strong>startPage ()</strong>
+    </dt>
+    <dd>
+    Start page
+Initializes the Startpage
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "chooseLv"></a>
+    <strong>chooseLv (key)</strong>
+    </dt>
+    <dd>
+    Choose Level
+Choosing the level from the level page using the input from the user and then outputing a parameter for the appropriate level.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+         The appropriate key to choose level.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        lv The output parameter representing the level.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Level"></a>
+    <strong>Level ()</strong>
+    </dt>
+    <dd>
+    Level
+Initializes the page with level choices.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "release_memory"></a>
+    <strong>release_memory ()</strong>
+    </dt>
+    <dd>
+    Release memory
+The function controlling the memory usage and keeping the graphics memory down.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "chooseParam"></a>
+    <strong>chooseParam (key)</strong>
+    </dt>
+    <dd>
+    Choose parameter
+The function taking care of the user input changing between the top, middle and bottom options of the avatar page.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+         The key representing the user input to choose the correct parameter.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        param The output parameter representing the parameter choosen by the user.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "chooseItem"></a>
+    <strong>chooseItem (key)</strong>
+    </dt>
+    <dd>
+    Choose item
+Choosing what items to design the avatar with depending on the user input and the parameter representing the current avatar page "level": top, middle or bottom.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+         The key to choose the correct item.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "get_design"></a>
+    <strong>get_design ()</strong>
+    </dt>
+    <dd>
+    Get design
+The function controlling the design to be displayed on Bloba.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Avatar"></a>
+    <strong>Avatar ()</strong>
+    </dt>
+    <dd>
+    Avatar selection
+The function controlling the avatar selection page.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Story"></a>
+    <strong>Story ()</strong>
+    </dt>
+    <dd>
+    Story
+The function controlling the story event handling the profile, background and the page.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "tutorial"></a>
+    <strong>tutorial (tutorial_page)</strong>
+    </dt>
+    <dd>
+    Tutorial
+The function controlling the tutorial event handling the profile, background and the page.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">tutorial_page</span>
+         The input tutorial handle in the on key
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "dance"></a>
+    <strong>dance ()</strong>
+    </dt>
+    <dd>
+    Dance function
+The function to handle the event after the completion of the boss level
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2014-12-08 11:05:03 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
